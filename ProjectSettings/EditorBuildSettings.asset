@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Samples/VIVE Wave XR Plugin - Essence/5.1.0-r.5/Essence/PassThrough/PassThrough.unity
     guid: 69abbfa26036f0442a5d3f24159e2b7c
   m_configObjects:
-    com.htc.upm.wave.xrsdk.xrsettings: {fileID: 11400000, guid: 1652249a0521c2f4abdd9811a0fbab09, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9c4af9b2c1b23024993d22eca1d9d4b8, type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: f3be918488d8b7445ba27bd0d79e3234, type: 2}
+    com.htc.upm.wave.xrsdk.xrsettings: {fileID: 11400000, guid: 8c1b256f57f1e4e75ad52217771ccd64, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 90575e11fe4e3476ca3d0f4058a0bc95, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 8955d82be611e45518cdeeb4cca6c64a, type: 2}
