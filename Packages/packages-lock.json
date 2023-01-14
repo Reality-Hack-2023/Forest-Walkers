@@ -1,22 +1,5 @@
 {
   "dependencies": {
-    "com.htc.upm.wave.essence": {
-      "version": "file:../LocalPackages/com.htc.upm.wave.essence-5.1.0-r.5.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.htc.upm.wave.xrsdk": "5.1.0-r.5",
-        "com.htc.upm.wave.native": "5.1.0-r.5"
-      }
-    },
-    "com.htc.upm.wave.native": {
-      "version": "file:../LocalPackages/com.htc.upm.wave.native-5.1.0-r.5.tgz",
-      "depth": 0,
-      "source": "local-tarball",
-      "dependencies": {
-        "com.htc.upm.wave.xrsdk": "5.1.0-r.5"
-      }
-    },
     "com.htc.upm.wave.openxr": {
       "version": "1.0.4",
       "depth": 2,
@@ -46,13 +29,35 @@
       },
       "url": "https://npm-registry.vive.com"
     },
-    "com.htc.upm.wave.xrsdk": {
-      "version": "file:../LocalPackages/com.htc.upm.wave.xrsdk-5.1.0-r.5.tgz",
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
       "depth": 0,
-      "source": "local-tarball",
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.2d.tilemap": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.ads": {
+      "version": "3.7.5",
+      "depth": 0,
+      "source": "registry",
       "dependencies": {
-        "com.unity.xr.management": "4.2.1"
-      }
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.analytics": {
+      "version": "3.6.12",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
@@ -276,7 +281,7 @@
     },
     "com.unity.subsystemregistration": {
       "version": "1.1.0",
-      "depth": 2,
+      "depth": 4,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.subsystems": "1.0.0"
@@ -380,7 +385,7 @@
     },
     "com.unity.xr.management": {
       "version": "4.2.1",
-      "depth": 1,
+      "depth": 3,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.subsystems": "1.0.0",

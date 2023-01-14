@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "com.htc.upm.wave.essence": "file:../LocalPackages/com.htc.upm.wave.essence-5.1.0-r.5.tgz",
-    "com.htc.upm.wave.native": "file:../LocalPackages/com.htc.upm.wave.native-5.1.0-r.5.tgz",
     "com.htc.upm.wave.openxr.toolkit.samples": "1.0.4",
     "com.htc.upm.wave.xrsdk": "file:../LocalPackages/com.htc.upm.wave.xrsdk-5.1.0-r.5.tgz",
     "com.unity.2d.sprite": "1.0.0",
