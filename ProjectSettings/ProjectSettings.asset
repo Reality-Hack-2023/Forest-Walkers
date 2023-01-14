@@ -164,7 +164,7 @@ PlayerSettings:
     Standalone: 0
     iPhone: 0
     tvOS: 0
-  overrideDefaultApplicationIdentifier: 0
+  overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 25
   AndroidTargetSdkVersion: 0
@@ -708,7 +708,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: USE_VIVE_WAVE_XR_5_0_4
+    Android: 
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
