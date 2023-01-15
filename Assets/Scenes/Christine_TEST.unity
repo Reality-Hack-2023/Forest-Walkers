@@ -5758,7 +5758,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &696130615
+--- !u!114 &696130616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696130612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d35827586a454b5db04700702475e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proximity: 10
+  maxVolume: 1
+  targetObject: {fileID: 1527821393}
+  blobObject: {fileID: 696130612}
+  farEmissionColor: {r: 0.7568628, g: 0.09411766, b: 0.08627451, a: 1}
+  closeEmissionColor: {r: 1, g: 1, b: 1, a: 1}
+  lerpSpeed: 0.1
+  materialToChange: {fileID: 2100000, guid: 85351a972d51d4c1bbfba7c57d7e33e4, type: 2}
+--- !u!82 &696130618
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5768,7 +5788,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fc934e0a156464b1882df9ea5415c9ee, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e576ab0e947ba441ba688e7c89db87c0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5854,7 +5874,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &696130616
+--- !u!114 &696130619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5863,17 +5883,116 @@ MonoBehaviour:
   m_GameObject: {fileID: 696130612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d35827586a454b5db04700702475e79, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a6342ea40ca740b7a5ccef661f2ce61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proximity: 5
-  maxVolume: 1
+  audioSource: {fileID: 696130618}
+  newClip: {fileID: 8300000, guid: 6a694919115c4425b88505b536979d84, type: 3}
   targetObject: {fileID: 1527821393}
   blobObject: {fileID: 696130612}
-  farEmissionColor: {r: 0.7568628, g: 0.09411766, b: 0.08627451, a: 1}
-  closeEmissionColor: {r: 1, g: 1, b: 1, a: 1}
-  lerpSpeed: 0.1
-  materialToChange: {fileID: 2100000, guid: 85351a972d51d4c1bbfba7c57d7e33e4, type: 2}
+  nextBlob: {fileID: 8711395597590762873}
+  proximity: 2
+--- !u!1 &895406404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 78bb70e267544427e968d87a7efb263c, type: 3}
+  m_PrefabInstance: {fileID: 1368271707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &895406406
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895406404}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 61b950d515d4344808798540fe8287fc, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 1500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1053251812
 GameObject:
   m_ObjectHideFlags: 0
@@ -6609,8 +6728,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6a694919115c4425b88505b536979d84, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: af0c7a8c877c549fbaa275e1ba9736d5, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -6620,9 +6739,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -6707,7 +6826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91d4b91ebd84412197e2e406c985d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proximity: 5
+  proximity: 10
   maxVolume: 1
   targetObject: {fileID: 1527821393}
   blobObject: {fileID: 1434505870}
@@ -6715,6 +6834,24 @@ MonoBehaviour:
   closeEmissionColor: {r: 1, g: 1, b: 1, a: 1}
   lerpSpeed: 0.1
   materialToChange: {fileID: 2100000, guid: 85351a972d51d4c1bbfba7c57d7e33e4, type: 2}
+--- !u!114 &1434505876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434505870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6342ea40ca740b7a5ccef661f2ce61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1434505873}
+  newClip: {fileID: 8300000, guid: 6a694919115c4425b88505b536979d84, type: 3}
+  targetObject: {fileID: 1527821393}
+  blobObject: {fileID: 1434505870}
+  nextBlob: {fileID: 1541703143}
+  proximity: 2
 --- !u!1 &1456419428
 GameObject:
   m_ObjectHideFlags: 0
@@ -6863,6 +7000,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  rotationSpeed: 25
+  mainCamera: {fileID: 1950462035}
 --- !u!1 &1541703143 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a9d9a7fa6b10d4cd49f9b65d0dddd878, type: 3}
@@ -6898,8 +7037,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fa94d6c1dae7e4b43969aea2e971ac89, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 47125b25f24e748ad87e6a99e7bb2bfc, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -6909,9 +7048,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -6996,7 +7135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b07dfb75142f40c1a824e126af3ff21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proximity: 5
+  proximity: 10
   maxVolume: 1
   targetObject: {fileID: 1527821393}
   blobObject: {fileID: 1541703143}
@@ -7004,6 +7143,41 @@ MonoBehaviour:
   closeEmissionColor: {r: 1, g: 1, b: 1, a: 1}
   lerpSpeed: 0.1
   materialToChange: {fileID: 2100000, guid: 85351a972d51d4c1bbfba7c57d7e33e4, type: 2}
+--- !u!114 &1541703149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541703143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6342ea40ca740b7a5ccef661f2ce61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1541703146}
+  newClip: {fileID: 8300000, guid: 792ee7f612a174f4e96d026d198292c9, type: 3}
+  targetObject: {fileID: 1527821393}
+  blobObject: {fileID: 1541703143}
+  nextBlob: {fileID: 0}
+  proximity: 2
+--- !u!114 &1541703150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541703143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466d54ac543354904bb0991777781f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blob1Renderer: {fileID: 0}
+  blob2Renderer: {fileID: 0}
+  blob3Renderer: {fileID: 0}
+  blob4Renderer: {fileID: 0}
+  newMaterial: {fileID: 0}
 --- !u!1 &1617017088
 GameObject:
   m_ObjectHideFlags: 0
@@ -8118,6 +8292,7 @@ GameObject:
   - component: {fileID: 8711395597590762874}
   - component: {fileID: 8711395597590762875}
   - component: {fileID: 8711395597590762876}
+  - component: {fileID: 8711395597590762877}
   m_Layer: 0
   m_Name: Blob 4 [ Blue Mouth ]
   m_TagString: Untagged
@@ -8155,8 +8330,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 94ba473c1d78e43119f0663d8d4cb0e3, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 62526b6866c1f4c489c332e69851632a, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -8166,9 +8341,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -8253,7 +8428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51f078513842b402d811a0aa93df6293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proximity: 5
+  proximity: 10
   maxVolume: 1
   targetObject: {fileID: 1527821393}
   blobObject: {fileID: 8711395597590762873}
@@ -8261,6 +8436,24 @@ MonoBehaviour:
   closeEmissionColor: {r: 1, g: 1, b: 1, a: 1}
   lerpSpeed: 0.1
   materialToChange: {fileID: 2100000, guid: 85351a972d51d4c1bbfba7c57d7e33e4, type: 2}
+--- !u!114 &8711395597590762877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711395597590762873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6342ea40ca740b7a5ccef661f2ce61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 8711395597590762875}
+  newClip: {fileID: 8300000, guid: 94ba473c1d78e43119f0663d8d4cb0e3, type: 3}
+  targetObject: {fileID: 1527821393}
+  blobObject: {fileID: 8711395597590762873}
+  nextBlob: {fileID: 1434505870}
+  proximity: 2
 --- !u!1 &8898988924324261702
 GameObject:
   m_ObjectHideFlags: 0
