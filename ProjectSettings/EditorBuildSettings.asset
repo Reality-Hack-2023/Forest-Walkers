@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/WorkingV1.unity
-    guid: f5d317c8919d045498850ac1d65eab18
-  - enabled: 0
-    path: Assets/Scenes/Christine_TEST.unity
-    guid: c21d0a3f5824c4b5491f565cbb6edc5d
   - enabled: 1
-    path: Assets/Scenes/WorkingV2.unity
-    guid: 20a9079ff8f75fa498401a0077b48a4e
+    path: Assets/Scenes/RealityHackBuild.unity
+    guid: 76c142167318df44dbe230285220754f
   m_configObjects:
     com.htc.upm.wave.xrsdk.xrsettings: {fileID: 11400000, guid: 8c1b256f57f1e4e75ad52217771ccd64, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 90575e11fe4e3476ca3d0f4058a0bc95, type: 2}
