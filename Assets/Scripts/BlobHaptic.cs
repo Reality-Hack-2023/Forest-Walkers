@@ -39,14 +39,18 @@ public class BlobHaptic : MonoBehaviour
         }
     }
 
-   /* private void OnTriggerExit(Collider other)
+   private void OnTriggerExit(Collider other)
     {
         //hapticControllerHelper.SendHaptics(breathingIntensity, breathingDuration);
-        mat("_EMISSION");
+        /*mat("_EMISSION");
         mat.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
-        mat.SetColor("_EmissionColor", Color.white);
+        mat.SetColor("_EmissionColor", Color.white);*/
         if (other.tag == "Player")
         {
+            RainConfetti._blobVisited++;
+            Debug.Log("BlobVisited="+ RainConfetti._blobVisited.ToString());
         }
-    }*/
+    }
+
+
 }
