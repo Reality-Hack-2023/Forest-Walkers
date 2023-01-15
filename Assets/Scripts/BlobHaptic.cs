@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BlobHaptic : MonoBehaviour
 {
+    public HapticController hapticControllerHelper;
     [Range(0, 1)]
-    public float breathingIntensity = 0.8f;
+    public float breathingIntensity = 0.5f;
     [Range(0, 1)]
-    public float breathingDuration = 6f;
+    public float breathingDuration = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +21,12 @@ public class BlobHaptic : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        hapticControllerHelper.SendHaptics(breathingIntensity, breathingDuration);
+
+        /*if (other.tag == "Player")
         {
-            HapticController.SendHaptics(breathingIntensity, breathingDuration);
-        }
+        }*/
     }
 }

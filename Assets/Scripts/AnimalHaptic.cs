@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class AnimalHaptic : MonoBehaviour
 {
+
+    public HapticController hapticControllerHelper;
+
     [Range(0, 1)]
-    public float breathingIntensity = 0.5f;
+    public float breathingIntensity = 0.06f;
     public bool isTriggerPressed = false;
     // Start is called before the first frame update
     void Start()
@@ -23,11 +26,16 @@ public class AnimalHaptic : MonoBehaviour
     {
         isTriggerPressed = true;
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && isTriggerPressed)
+        if (other.tag == "Player")
         {
-            HapticController.SendHaptics(Mathf.Lerp(0.1f, 1f, breathingIntensity), 5f);
+            hapticControllerHelper.SendHaptics(Mathf.Lerp(0.1f, 0.3f, breathingIntensity), 2f);
+            //hapticControllerHelper.SendHaptics(Mathf.Lerp(0.1f, 0.3f, breathingIntensity), 2f);
+
+            /*if (isTriggerPressed)
+            {
+            }*/
         }
     }
 
