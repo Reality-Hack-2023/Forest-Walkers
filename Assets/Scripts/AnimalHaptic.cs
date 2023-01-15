@@ -30,7 +30,7 @@ public class AnimalHaptic : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            hapticControllerHelper.SendHaptics(Mathf.Lerp(0.1f, 0.3f, breathingIntensity), 2f);
+            hapticControllerHelper.SendHaptics(Mathf.Lerp(0.1f, 0.3f, breathingIntensity), 1f);
             //hapticControllerHelper.SendHaptics(Mathf.Lerp(0.1f, 0.3f, breathingIntensity), 2f);
 
             /*if (isTriggerPressed)
