@@ -142,8 +142,55 @@ public class Neuos_controller : MonoBehaviour
             // add each key value pair as a line to the string builder
             builder.AppendLine($"{kvp.Key} : {kvp.Value}");
         }
-        focusText.text = fields.Where(i => i.Key == "focus").Select(i => i.Value).First();
-        enjoymentText.text = fields.Where(i => i.Key == "enjoy").Select(i => i.Value).First();
+        //focusText.text = fields.Where(i => i.Key == "focus").Select(i => i.Value).First();
+        //enjoymentText.text = fields.Where(i => i.Key == "enjoyment").Select(i => i.Value).First();
+
+        //ENJOY
+        if (float.Parse(fields.Where(i => i.Key == "enjoyment").Select(i => i.Value).First()) <= 50)
+        {
+            enjoymentText.text = "Neutral";
+            enjoymentText.color = Color.white;
+        }
+        else if (float.Parse(fields.Where(i => i.Key == "enjoyment").Select(i => i.Value).First()) > 50
+            && float.Parse(fields.Where(i => i.Key == "enjoyment").Select(i => i.Value).First()) <= 70)
+        {
+            enjoymentText.text = "Into it!";
+            enjoymentText.color = Color.cyan;
+        }
+        else if (float.Parse(fields.Where(i => i.Key == "enjoyment").Select(i => i.Value).First()) > 70
+            && float.Parse(fields.Where(i => i.Key == "enjoyment").Select(i => i.Value).First()) <= 90)
+        {
+            enjoymentText.text = "Happy";
+            enjoymentText.color = Color.yellow;
+        }
+        else
+        {
+            enjoymentText.text = "Excited";
+            enjoymentText.color = Color.green;
+        }
+        //FOCUS
+        if (float.Parse(fields.Where(i => i.Key == "focus").Select(i => i.Value).First()) <= 50)
+        {
+            focusText.text = "Relax";
+            focusText.color = Color.white;
+        }
+        else if (float.Parse(fields.Where(i => i.Key == "focus").Select(i => i.Value).First()) > 50
+            && float.Parse(fields.Where(i => i.Key == "focus").Select(i => i.Value).First()) <= 70)
+        {
+            focusText.text = "Feel it";
+            focusText.color = Color.cyan;
+        }
+        else if (float.Parse(fields.Where(i => i.Key == "focus").Select(i => i.Value).First()) > 70
+            && float.Parse(fields.Where(i => i.Key == "focus").Select(i => i.Value).First()) <= 90)
+        {
+            focusText.text = "Focusing";
+            focusText.color = Color.yellow;
+        }
+        else
+        {
+            focusText.text = "Intensive";
+            focusText.color = Color.green;
+        }
 
     }
 }
