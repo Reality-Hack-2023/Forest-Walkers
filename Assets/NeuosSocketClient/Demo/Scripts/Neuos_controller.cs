@@ -9,15 +9,13 @@ public class Neuos_controller : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
-    private InputField ipField;
+    private string ipField;
     [SerializeField]
-    private InputField portField;
+    private string portField;
     [SerializeField]
     private Text enjoymentText;
     [SerializeField]
     private Text focusText;
-    [SerializeField]
-    private Button connectButton;
     [SerializeField]
     private string ApiKey;
     [SerializeField]
@@ -28,6 +26,13 @@ public class Neuos_controller : MonoBehaviour
     StringBuilder arrayBuilder = new StringBuilder();
     private Dictionary<string, string> fields = new Dictionary<string, string>();
     /// <summary>
+    /// start
+    /// </summary>
+    public void Start()
+    {
+        ConnectToServer();
+    }
+    /// <summary>
     /// Method to call that will connect to the Neuos Stream server
     /// </summary>
     public void ConnectToServer()
@@ -35,7 +40,7 @@ public class Neuos_controller : MonoBehaviour
         if (!neuosStreamClient.IsConnected)
         {
             neuosStreamClient.ApiKey = ApiKey;
-            neuosStreamClient.ConnectToServer(ipField.text, int.Parse(portField.text));
+            neuosStreamClient.ConnectToServer(ipField, int.Parse(portField));
         }
     }
     /// <summary>
@@ -53,7 +58,7 @@ public class Neuos_controller : MonoBehaviour
     /// </summary>
     public void OnServerConnected()
     {
-        connectButton.gameObject.SetActive(false);
+        //connectButton.gameObject.SetActive(false);
 
     }
     /// <summary>
@@ -61,7 +66,7 @@ public class Neuos_controller : MonoBehaviour
     /// </summary>
     public void OnServerDisconnected()
     {
-        connectButton.gameObject.SetActive(true);
+        //connectButton.gameObject.SetActive(true);
     }
     /// <summary>
     /// Callback for when the Neuos Stream server sends an updated value
@@ -138,6 +143,7 @@ public class Neuos_controller : MonoBehaviour
             builder.AppendLine($"{kvp.Key} : {kvp.Value}");
         }
         focusText.text = fields.Where(i => i.Key == "focus").Select(i => i.Value).First();
+        enjoymentText.text = fields.Where(i => i.Key == "enjoy").Select(i => i.Value).First();
 
     }
 }
