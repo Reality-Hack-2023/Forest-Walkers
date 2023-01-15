@@ -12,6 +12,7 @@ Material:
   m_ValidKeywords:
   - _EMISSION
   - _ENVIRONMENTREFLECTIONS_OFF
+  - _RECEIVE_SHADOWS_OFF
   m_InvalidKeywords:
   - _GLOSSYREFLECTIONS_OFF
   m_LightmapFlags: 2
@@ -101,7 +102,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -112,8 +113,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.8962264, g: 0.5344653, b: 0.36779106, a: 1}
-    - _Color: {r: 0.8962264, g: 0.5344653, b: 0.36779106, a: 1}
-    - _EmissionColor: {r: 0.4657087, g: 0.3518688, b: 0.6985631, a: 1}
+    - _Color: {r: 0.8962264, g: 0.5344653, b: 0.36779103, a: 1}
+    - _EmissionColor: {r: 0.038928382, g: 0.764151, b: 0.08988377, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &3168747757208098548
